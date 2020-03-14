@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+       <button ion-button  icon-only (click)="share()">
+        <ion-icon name="share-social-outline"></ion-icon>
+            </button>
+    </ion-buttons>
+      <div style="text-align: center">Modicare Shopping Products</div>
+
+      <ion-buttons slot="end">
+       <button ion-button  icon-only (click)="share()">
+              <ion-icon name="help-ouline"></ion-icon>
+            </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+</ion-header>        
+<ion-content>
+
+   <ion-list>
+    <ion-item *ngFor="let item of infos" (click)="selectShoppingItem(item)">
+      <ion-card style="width:100%">
+          <ion-card-header>
+          Product Name: {{item.name}}
+          </ion-card-header>
+          <ion-card-content>
+          Amount: {{item.DateOfJoining}}
+                  
+          </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
